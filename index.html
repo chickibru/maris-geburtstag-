@@ -490,7 +490,7 @@ function openLetter(data){
     ? `<img src="${data.photo}" alt="${data.name}">`
     : `<div class="letter-banner-placeholder" style="background:linear-gradient(135deg,${data.light},${data.color}66);color:${data.color}">${initials(data.name)}</div>`;
   banner.innerHTML = `${photoHTML}<div class="letter-banner-overlay"></div><div class="letter-seal" style="background:${data.color}">✦</div>`;
-  document.getElementById('modal-dear').textContent = 'Dear Maris,';
+  document.getElementById('modal-dear').textContent = data.dear || 'Dear Maris,';
   document.getElementById('modal-dear').style.color = data.color;
   document.getElementById('modal-body').textContent = data.message;
   document.getElementById('modal-name').textContent = data.name;
